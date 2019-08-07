@@ -41,47 +41,52 @@ def printList(arr):
         print(arr[i],end=" ") 
     print() 
     
-    
+print("Method 2 average runtime")    
 A = []
-n = 100
+h = 100
 
 for i in range(0, 9):
     meanA = []
+
     for j in range(0, 10):
-        for k in range(0, n):
+        A = []
+        for k in range(0, h):
             A.append(random.randint(1, 100))
 
         count = 0 # count
         t1 = time.time() #set time before al
-        mergeSort(A, count)
+        r = mergeSort(A, count)
         t2 = time.time()
         meanA.append(t2 - t1)
     sum = 0
     for j in range(0, 10):
         sum += meanA[j]
-    print("n = ", n, "time = ", sum/10)
+    print("n = ", h, "time = ", sum/10)
+    sum = 0
         
-    n += 100
+    h += 100
 
 A = []
-n = 1000
+h = 1000
 
 for i in range(0, 9):
     meanA = []
     for j in range(0, 10):
-        for k in range(0, n):
+        A = []
+        for k in range(0, h):
             A.append(random.randint(1, 100))
 
         count = 0 # count
         t1 = time.time() #set time before al
-        mergeSort(A, count)
+        r = mergeSort(A, count)
         t2 = time.time()
         meanA.append(t2 - t1)
     sum = 0
     for j in range(0, 10):
         sum += meanA[j]
-    print("n = ", n, "time = ", sum/10)
+    print("n = ", h, "time = ", sum/10)
+    sum = 0
         
-    n += 1000
+    h += 1000
 # printList(array)
 # print(n)
